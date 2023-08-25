@@ -64,10 +64,21 @@ export default function DefaultLayout() {
                     <div className="w-full" id="navbar-default">
                         <ul className="flex flex-col p-4 border-grey-100 rounded-lg bg-grey-50">
                             <li>
-                                <NavLink to="/profile">Profile</NavLink>
+                                <NavLink to="/profile"
+                                className={({isActive})=>
+                                isActive
+                                ? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white "
+                                : "block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 dark:text-gray-400 md:dark:hover:text-white"
+                            }>Profile
+                            </NavLink>
                             </li>
                             <li>
-                                <NavLink to="/about">About</NavLink>
+                                <NavLink to="/about"
+                                className={({isActive})=>
+                                isActive
+                                ? "block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white "
+                                : "block py-2 pl-3 pr-4 rounded md:bg-transparent md:p-0 dark:text-gray-400 md:dark:hover:text-white"
+                            }>About</NavLink>
                             </li>
                             <li>
                                 <a href="#" className="block py-2 pl-3 pr-4 text-grey-700 rounded hover pg-grey-100" onClick={handleLogout}>Logout</a>
